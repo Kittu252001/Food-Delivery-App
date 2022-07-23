@@ -1,6 +1,6 @@
-###Food Delivery App
+# Food Delivery App
 
-##Steps to run this application in VS Code*
+## Steps to run this application in VS Code*
 
 *Clone the project* 
 
