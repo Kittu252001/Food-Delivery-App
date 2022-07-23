@@ -784,7 +784,465 @@ class _HomepageState extends State<Homepage> {
                                                     ),
                                                   ),
                                                 ),
-                                                onPressed: () {},
+                                                onPressed: () {
+                                                  Navigator.pop(context);
+                                                  showModalBottomSheet(
+                                                    shape:
+                                                        RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .only(
+                                                      topLeft:
+                                                          Radius.circular(20),
+                                                      topRight:
+                                                          Radius.circular(20),
+                                                    )),
+                                                    backgroundColor:
+                                                        Colors.white,
+                                                    isScrollControlled: true,
+                                                    context: context,
+                                                    builder: (context) =>
+                                                        Container(
+                                                      height: 690,
+                                                      child: Column(
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    top: 30,
+                                                                    right: 100),
+                                                            child: Text(
+                                                              'We Will deliver in\n24 minutes to the address',
+                                                              style: TextStyle(
+                                                                fontSize: 20,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Row(
+                                                            children: [
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                        .only(
+                                                                  top: 10,
+                                                                  left: 20,
+                                                                ),
+                                                                child: Text(
+                                                                  '100aEaling Rd',
+                                                                  style:
+                                                                      TextStyle(
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400,
+                                                                    fontSize:
+                                                                        18,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                        .only(
+                                                                  top: 10,
+                                                                  left: 20,
+                                                                ),
+                                                                child:
+                                                                    TextButton(
+                                                                  onPressed:
+                                                                      () {},
+                                                                  child: Text(
+                                                                    'change address',
+                                                                    style:
+                                                                        TextStyle(
+                                                                      fontSize:
+                                                                          18,
+                                                                      color: Colors
+                                                                          .grey
+                                                                          .shade300,
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              )
+                                                            ],
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                              top: 20,
+                                                            ),
+                                                            child: Row(
+                                                              mainAxisAlignment:
+                                                                  MainAxisAlignment
+                                                                      .spaceEvenly,
+                                                              children: [
+                                                                Image.asset(
+                                                                  'images/Dessert2.png',
+                                                                  height: 80,
+                                                                ),
+                                                                Column(
+                                                                  children: [
+                                                                    Text(
+                                                                      'Honey Begal',
+                                                                      style:
+                                                                          TextStyle(
+                                                                        fontSize:
+                                                                            18,
+                                                                      ),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding:
+                                                                          const EdgeInsets.all(
+                                                                              8.0),
+                                                                      child:
+                                                                          Row(
+                                                                        children: [
+                                                                          Padding(
+                                                                            padding:
+                                                                                const EdgeInsets.only(
+                                                                              right: 5,
+                                                                            ),
+                                                                            child:
+                                                                                Container(
+                                                                              height: 40,
+                                                                              width: 40,
+                                                                              decoration: BoxDecoration(
+                                                                                color: Colors.grey.shade200,
+                                                                                borderRadius: BorderRadius.circular(
+                                                                                  10,
+                                                                                ),
+                                                                              ),
+                                                                              child: IconButton(
+                                                                                onPressed: minus,
+                                                                                icon: Icon(
+                                                                                  Icons.remove,
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                          Text(
+                                                                            '${_n}',
+                                                                            style:
+                                                                                TextStyle(
+                                                                              fontSize: 18,
+                                                                            ),
+                                                                          ),
+                                                                          Padding(
+                                                                            padding:
+                                                                                const EdgeInsets.only(
+                                                                              left: 5,
+                                                                            ),
+                                                                            child:
+                                                                                Container(
+                                                                              height: 40,
+                                                                              width: 40,
+                                                                              decoration: BoxDecoration(
+                                                                                color: Colors.grey.shade200,
+                                                                                borderRadius: BorderRadius.circular(
+                                                                                  10,
+                                                                                ),
+                                                                              ),
+                                                                              child: IconButton(
+                                                                                onPressed: add,
+                                                                                icon: Icon(
+                                                                                  Icons.add,
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ],
+                                                                      ),
+                                                                    ),
+                                                                  ],
+                                                                ),
+                                                                Text(
+                                                                  '\u{20B9}285',
+                                                                  style: TextStyle(
+                                                                      fontSize:
+                                                                          18,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .bold),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .all(30.0),
+                                                            child: Divider(
+                                                              color: Colors.grey
+                                                                  .shade200,
+                                                              thickness: 1,
+                                                            ),
+                                                          ),
+                                                          Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .spaceEvenly,
+                                                            children: [
+                                                              Icon(
+                                                                Icons
+                                                                    .food_bank_outlined,
+                                                                size: 40,
+                                                              ),
+                                                              Text(
+                                                                'cutlery',
+                                                                style:
+                                                                    TextStyle(
+                                                                  fontSize: 18,
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .all(
+                                                                        8.0),
+                                                                child: Row(
+                                                                  children: [
+                                                                    Padding(
+                                                                      padding:
+                                                                          const EdgeInsets
+                                                                              .only(
+                                                                        right:
+                                                                            5,
+                                                                      ),
+                                                                      child:
+                                                                          Container(
+                                                                        height:
+                                                                            40,
+                                                                        width:
+                                                                            40,
+                                                                        decoration:
+                                                                            BoxDecoration(
+                                                                          color: Colors
+                                                                              .grey
+                                                                              .shade200,
+                                                                          borderRadius:
+                                                                              BorderRadius.circular(
+                                                                            10,
+                                                                          ),
+                                                                        ),
+                                                                        child:
+                                                                            IconButton(
+                                                                          onPressed:
+                                                                              minus,
+                                                                          icon:
+                                                                              Icon(
+                                                                            Icons.remove,
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                    Text(
+                                                                      '${_n}',
+                                                                      style:
+                                                                          TextStyle(
+                                                                        fontSize:
+                                                                            18,
+                                                                      ),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding:
+                                                                          const EdgeInsets
+                                                                              .only(
+                                                                        left: 5,
+                                                                      ),
+                                                                      child:
+                                                                          Container(
+                                                                        height:
+                                                                            40,
+                                                                        width:
+                                                                            40,
+                                                                        decoration:
+                                                                            BoxDecoration(
+                                                                          color: Colors
+                                                                              .grey
+                                                                              .shade200,
+                                                                          borderRadius:
+                                                                              BorderRadius.circular(
+                                                                            10,
+                                                                          ),
+                                                                        ),
+                                                                        child:
+                                                                            IconButton(
+                                                                          onPressed:
+                                                                              add,
+                                                                          icon:
+                                                                              Icon(
+                                                                            Icons.add,
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ],
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .all(30.0),
+                                                            child: Divider(
+                                                              color: Colors.grey
+                                                                  .shade200,
+                                                              thickness: 1,
+                                                            ),
+                                                          ),
+                                                          Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .spaceAround,
+                                                            children: [
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        right:
+                                                                            50),
+                                                                child: Text(
+                                                                  'Delivery',
+                                                                  style:
+                                                                      TextStyle(
+                                                                    fontSize:
+                                                                        18,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Text(
+                                                                '₹0.00',
+                                                                style:
+                                                                    TextStyle(
+                                                                  fontSize: 18,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                              top: 20,
+                                                              right: 150,
+                                                            ),
+                                                            child: Text(
+                                                              'Free Delivery from ₹40',
+                                                              style: TextStyle(
+                                                                fontSize: 15,
+                                                                color: Colors
+                                                                    .grey
+                                                                    .shade400,
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                              top: 30,
+                                                              right: 160,
+                                                            ),
+                                                            child: Text(
+                                                              'Payment method',
+                                                              style: TextStyle(
+                                                                color: Colors
+                                                                    .grey
+                                                                    .shade500,
+                                                                fontSize: 18,
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .spaceEvenly,
+                                                            children: [
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                        .only(
+                                                                  left: 20,
+                                                                ),
+                                                                child: Icon(
+                                                                  Icons.payment,
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                        .only(
+                                                                  right: 100,
+                                                                ),
+                                                                child: Text(
+                                                                  'Debit Card',
+                                                                  style:
+                                                                      TextStyle(
+                                                                    fontSize:
+                                                                        18,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              IconButton(
+                                                                onPressed:
+                                                                    () {},
+                                                                icon: Icon(
+                                                                  Icons
+                                                                      .arrow_forward_ios_rounded,
+                                                                  size: 15,
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          SizedBox(
+                                                            height: 50,
+                                                            width: 350,
+                                                            child:
+                                                                ElevatedButton(
+                                                                    style: ElevatedButton
+                                                                        .styleFrom(
+                                                                      primary:
+                                                                          Colors
+                                                                              .black,
+                                                                      shape:
+                                                                          RoundedRectangleBorder(
+                                                                        borderRadius:
+                                                                            BorderRadius.circular(
+                                                                          10,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                    onPressed:
+                                                                        () {},
+                                                                    child: Row(
+                                                                      mainAxisAlignment:
+                                                                          MainAxisAlignment
+                                                                              .spaceBetween,
+                                                                      children: [
+                                                                        Text(
+                                                                          'Pay',
+                                                                        ),
+                                                                        Text(
+                                                                            '24min . ₹285')
+                                                                      ],
+                                                                    )),
+                                                          )
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  );
+                                                },
                                                 child: Text(
                                                     "Add to cart  \u{20B9}285.00")),
                                           )
@@ -1114,7 +1572,465 @@ class _HomepageState extends State<Homepage> {
                                                     ),
                                                   ),
                                                 ),
-                                                onPressed: () {},
+                                                onPressed: () {
+                                                  Navigator.pop(context);
+                                                  showModalBottomSheet(
+                                                    shape:
+                                                        RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .only(
+                                                      topLeft:
+                                                          Radius.circular(20),
+                                                      topRight:
+                                                          Radius.circular(20),
+                                                    )),
+                                                    backgroundColor:
+                                                        Colors.white,
+                                                    isScrollControlled: true,
+                                                    context: context,
+                                                    builder: (context) =>
+                                                        Container(
+                                                      height: 690,
+                                                      child: Column(
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    top: 30,
+                                                                    right: 100),
+                                                            child: Text(
+                                                              'We Will deliver in\n24 minutes to the address',
+                                                              style: TextStyle(
+                                                                fontSize: 20,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Row(
+                                                            children: [
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                        .only(
+                                                                  top: 10,
+                                                                  left: 20,
+                                                                ),
+                                                                child: Text(
+                                                                  '100aEaling Rd',
+                                                                  style:
+                                                                      TextStyle(
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400,
+                                                                    fontSize:
+                                                                        18,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                        .only(
+                                                                  top: 10,
+                                                                  left: 20,
+                                                                ),
+                                                                child:
+                                                                    TextButton(
+                                                                  onPressed:
+                                                                      () {},
+                                                                  child: Text(
+                                                                    'change address',
+                                                                    style:
+                                                                        TextStyle(
+                                                                      fontSize:
+                                                                          18,
+                                                                      color: Colors
+                                                                          .grey
+                                                                          .shade300,
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              )
+                                                            ],
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                              top: 20,
+                                                            ),
+                                                            child: Row(
+                                                              mainAxisAlignment:
+                                                                  MainAxisAlignment
+                                                                      .spaceEvenly,
+                                                              children: [
+                                                                Image.asset(
+                                                                  'images/Pizza.png',
+                                                                  height: 80,
+                                                                ),
+                                                                Column(
+                                                                  children: [
+                                                                    Text(
+                                                                      'Magarita Pizza',
+                                                                      style:
+                                                                          TextStyle(
+                                                                        fontSize:
+                                                                            18,
+                                                                      ),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding:
+                                                                          const EdgeInsets.all(
+                                                                              8.0),
+                                                                      child:
+                                                                          Row(
+                                                                        children: [
+                                                                          Padding(
+                                                                            padding:
+                                                                                const EdgeInsets.only(
+                                                                              right: 5,
+                                                                            ),
+                                                                            child:
+                                                                                Container(
+                                                                              height: 40,
+                                                                              width: 40,
+                                                                              decoration: BoxDecoration(
+                                                                                color: Colors.grey.shade200,
+                                                                                borderRadius: BorderRadius.circular(
+                                                                                  10,
+                                                                                ),
+                                                                              ),
+                                                                              child: IconButton(
+                                                                                onPressed: minus,
+                                                                                icon: Icon(
+                                                                                  Icons.remove,
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                          Text(
+                                                                            '${_n}',
+                                                                            style:
+                                                                                TextStyle(
+                                                                              fontSize: 18,
+                                                                            ),
+                                                                          ),
+                                                                          Padding(
+                                                                            padding:
+                                                                                const EdgeInsets.only(
+                                                                              left: 5,
+                                                                            ),
+                                                                            child:
+                                                                                Container(
+                                                                              height: 40,
+                                                                              width: 40,
+                                                                              decoration: BoxDecoration(
+                                                                                color: Colors.grey.shade200,
+                                                                                borderRadius: BorderRadius.circular(
+                                                                                  10,
+                                                                                ),
+                                                                              ),
+                                                                              child: IconButton(
+                                                                                onPressed: add,
+                                                                                icon: Icon(
+                                                                                  Icons.add,
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ],
+                                                                      ),
+                                                                    ),
+                                                                  ],
+                                                                ),
+                                                                Text(
+                                                                  '\u{20B9}450',
+                                                                  style: TextStyle(
+                                                                      fontSize:
+                                                                          18,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .bold),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .all(30.0),
+                                                            child: Divider(
+                                                              color: Colors.grey
+                                                                  .shade200,
+                                                              thickness: 1,
+                                                            ),
+                                                          ),
+                                                          Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .spaceEvenly,
+                                                            children: [
+                                                              Icon(
+                                                                Icons
+                                                                    .food_bank_outlined,
+                                                                size: 40,
+                                                              ),
+                                                              Text(
+                                                                'cutlery',
+                                                                style:
+                                                                    TextStyle(
+                                                                  fontSize: 18,
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .all(
+                                                                        8.0),
+                                                                child: Row(
+                                                                  children: [
+                                                                    Padding(
+                                                                      padding:
+                                                                          const EdgeInsets
+                                                                              .only(
+                                                                        right:
+                                                                            5,
+                                                                      ),
+                                                                      child:
+                                                                          Container(
+                                                                        height:
+                                                                            40,
+                                                                        width:
+                                                                            40,
+                                                                        decoration:
+                                                                            BoxDecoration(
+                                                                          color: Colors
+                                                                              .grey
+                                                                              .shade200,
+                                                                          borderRadius:
+                                                                              BorderRadius.circular(
+                                                                            10,
+                                                                          ),
+                                                                        ),
+                                                                        child:
+                                                                            IconButton(
+                                                                          onPressed:
+                                                                              minus,
+                                                                          icon:
+                                                                              Icon(
+                                                                            Icons.remove,
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                    Text(
+                                                                      '${_n}',
+                                                                      style:
+                                                                          TextStyle(
+                                                                        fontSize:
+                                                                            18,
+                                                                      ),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding:
+                                                                          const EdgeInsets
+                                                                              .only(
+                                                                        left: 5,
+                                                                      ),
+                                                                      child:
+                                                                          Container(
+                                                                        height:
+                                                                            40,
+                                                                        width:
+                                                                            40,
+                                                                        decoration:
+                                                                            BoxDecoration(
+                                                                          color: Colors
+                                                                              .grey
+                                                                              .shade200,
+                                                                          borderRadius:
+                                                                              BorderRadius.circular(
+                                                                            10,
+                                                                          ),
+                                                                        ),
+                                                                        child:
+                                                                            IconButton(
+                                                                          onPressed:
+                                                                              add,
+                                                                          icon:
+                                                                              Icon(
+                                                                            Icons.add,
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ],
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .all(30.0),
+                                                            child: Divider(
+                                                              color: Colors.grey
+                                                                  .shade200,
+                                                              thickness: 1,
+                                                            ),
+                                                          ),
+                                                          Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .spaceAround,
+                                                            children: [
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        right:
+                                                                            50),
+                                                                child: Text(
+                                                                  'Delivery',
+                                                                  style:
+                                                                      TextStyle(
+                                                                    fontSize:
+                                                                        18,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Text(
+                                                                '₹0.00',
+                                                                style:
+                                                                    TextStyle(
+                                                                  fontSize: 18,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                              top: 20,
+                                                              right: 150,
+                                                            ),
+                                                            child: Text(
+                                                              'Free Delivery from ₹40',
+                                                              style: TextStyle(
+                                                                fontSize: 15,
+                                                                color: Colors
+                                                                    .grey
+                                                                    .shade400,
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                              top: 30,
+                                                              right: 160,
+                                                            ),
+                                                            child: Text(
+                                                              'Payment method',
+                                                              style: TextStyle(
+                                                                color: Colors
+                                                                    .grey
+                                                                    .shade500,
+                                                                fontSize: 18,
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .spaceEvenly,
+                                                            children: [
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                        .only(
+                                                                  left: 20,
+                                                                ),
+                                                                child: Icon(
+                                                                  Icons.payment,
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                        .only(
+                                                                  right: 100,
+                                                                ),
+                                                                child: Text(
+                                                                  'Debit Card',
+                                                                  style:
+                                                                      TextStyle(
+                                                                    fontSize:
+                                                                        18,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              IconButton(
+                                                                onPressed:
+                                                                    () {},
+                                                                icon: Icon(
+                                                                  Icons
+                                                                      .arrow_forward_ios_rounded,
+                                                                  size: 15,
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          SizedBox(
+                                                            height: 50,
+                                                            width: 350,
+                                                            child:
+                                                                ElevatedButton(
+                                                                    style: ElevatedButton
+                                                                        .styleFrom(
+                                                                      primary:
+                                                                          Colors
+                                                                              .black,
+                                                                      shape:
+                                                                          RoundedRectangleBorder(
+                                                                        borderRadius:
+                                                                            BorderRadius.circular(
+                                                                          10,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                    onPressed:
+                                                                        () {},
+                                                                    child: Row(
+                                                                      mainAxisAlignment:
+                                                                          MainAxisAlignment
+                                                                              .spaceBetween,
+                                                                      children: [
+                                                                        Text(
+                                                                          'Pay',
+                                                                        ),
+                                                                        Text(
+                                                                            '24min . ₹450')
+                                                                      ],
+                                                                    )),
+                                                          )
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  );
+                                                },
                                                 child: Text(
                                                     "Add to cart  \u{20B9}450.00")),
                                           )
@@ -1439,7 +2355,9 @@ class _HomepageState extends State<Homepage> {
                                                     ),
                                                   ),
                                                 ),
-                                                onPressed: () {},
+                                                onPressed: () {
+                                                  Navigator.pop(context);
+                                                },
                                                 child: Text(
                                                     "Add to cart  \u{20B9}145.00")),
                                           )
@@ -1742,7 +2660,461 @@ class _HomepageState extends State<Homepage> {
                                                         ),
                                                       ),
                                                     ),
-                                                    onPressed: () {},
+                                                    onPressed: () {
+                                                      Navigator.pop(context);
+                                                      showModalBottomSheet(
+                                                        shape:
+                                                            RoundedRectangleBorder(
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .only(
+                                                          topLeft:
+                                                              Radius.circular(
+                                                                  20),
+                                                          topRight:
+                                                              Radius.circular(
+                                                                  20),
+                                                        )),
+                                                        backgroundColor:
+                                                            Colors.white,
+                                                        isScrollControlled:
+                                                            true,
+                                                        context: context,
+                                                        builder: (context) =>
+                                                            Container(
+                                                          height: 690,
+                                                          child: Column(
+                                                            children: [
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        top: 30,
+                                                                        right:
+                                                                            100),
+                                                                child: Text(
+                                                                  'We Will deliver in\n24 minutes to the address',
+                                                                  style:
+                                                                      TextStyle(
+                                                                    fontSize:
+                                                                        20,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Row(
+                                                                children: [
+                                                                  Padding(
+                                                                    padding:
+                                                                        const EdgeInsets
+                                                                            .only(
+                                                                      top: 10,
+                                                                      left: 20,
+                                                                    ),
+                                                                    child: Text(
+                                                                      '100aEaling Rd',
+                                                                      style:
+                                                                          TextStyle(
+                                                                        fontWeight:
+                                                                            FontWeight.w400,
+                                                                        fontSize:
+                                                                            18,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Padding(
+                                                                    padding:
+                                                                        const EdgeInsets
+                                                                            .only(
+                                                                      top: 10,
+                                                                      left: 20,
+                                                                    ),
+                                                                    child:
+                                                                        TextButton(
+                                                                      onPressed:
+                                                                          () {},
+                                                                      child:
+                                                                          Text(
+                                                                        'change address',
+                                                                        style:
+                                                                            TextStyle(
+                                                                          fontSize:
+                                                                              18,
+                                                                          color: Colors
+                                                                              .grey
+                                                                              .shade300,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  )
+                                                                ],
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                        .only(
+                                                                  top: 20,
+                                                                ),
+                                                                child: Row(
+                                                                  mainAxisAlignment:
+                                                                      MainAxisAlignment
+                                                                          .spaceEvenly,
+                                                                  children: [
+                                                                    Image.asset(
+                                                                      'images/Sweet-Bowl.png',
+                                                                      height:
+                                                                          80,
+                                                                    ),
+                                                                    Column(
+                                                                      children: [
+                                                                        Text(
+                                                                          'Sweet Bowl',
+                                                                          style:
+                                                                              TextStyle(
+                                                                            fontSize:
+                                                                                18,
+                                                                          ),
+                                                                        ),
+                                                                        Padding(
+                                                                          padding:
+                                                                              const EdgeInsets.all(8.0),
+                                                                          child:
+                                                                              Row(
+                                                                            children: [
+                                                                              Padding(
+                                                                                padding: const EdgeInsets.only(
+                                                                                  right: 5,
+                                                                                ),
+                                                                                child: Container(
+                                                                                  height: 40,
+                                                                                  width: 40,
+                                                                                  decoration: BoxDecoration(
+                                                                                    color: Colors.grey.shade200,
+                                                                                    borderRadius: BorderRadius.circular(
+                                                                                      10,
+                                                                                    ),
+                                                                                  ),
+                                                                                  child: IconButton(
+                                                                                    onPressed: minus,
+                                                                                    icon: Icon(
+                                                                                      Icons.remove,
+                                                                                    ),
+                                                                                  ),
+                                                                                ),
+                                                                              ),
+                                                                              Text(
+                                                                                '${_n}',
+                                                                                style: TextStyle(
+                                                                                  fontSize: 18,
+                                                                                ),
+                                                                              ),
+                                                                              Padding(
+                                                                                padding: const EdgeInsets.only(
+                                                                                  left: 5,
+                                                                                ),
+                                                                                child: Container(
+                                                                                  height: 40,
+                                                                                  width: 40,
+                                                                                  decoration: BoxDecoration(
+                                                                                    color: Colors.grey.shade200,
+                                                                                    borderRadius: BorderRadius.circular(
+                                                                                      10,
+                                                                                    ),
+                                                                                  ),
+                                                                                  child: IconButton(
+                                                                                    onPressed: add,
+                                                                                    icon: Icon(
+                                                                                      Icons.add,
+                                                                                    ),
+                                                                                  ),
+                                                                                ),
+                                                                              ),
+                                                                            ],
+                                                                          ),
+                                                                        ),
+                                                                      ],
+                                                                    ),
+                                                                    Text(
+                                                                      '\u{20B9}145',
+                                                                      style: TextStyle(
+                                                                          fontSize:
+                                                                              18,
+                                                                          fontWeight:
+                                                                              FontWeight.bold),
+                                                                    ),
+                                                                  ],
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .all(
+                                                                        30.0),
+                                                                child: Divider(
+                                                                  color: Colors
+                                                                      .grey
+                                                                      .shade200,
+                                                                  thickness: 1,
+                                                                ),
+                                                              ),
+                                                              Row(
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .spaceEvenly,
+                                                                children: [
+                                                                  Icon(
+                                                                    Icons
+                                                                        .food_bank_outlined,
+                                                                    size: 40,
+                                                                  ),
+                                                                  Text(
+                                                                    'cutlery',
+                                                                    style:
+                                                                        TextStyle(
+                                                                      fontSize:
+                                                                          18,
+                                                                    ),
+                                                                  ),
+                                                                  Padding(
+                                                                    padding:
+                                                                        const EdgeInsets.all(
+                                                                            8.0),
+                                                                    child: Row(
+                                                                      children: [
+                                                                        Padding(
+                                                                          padding:
+                                                                              const EdgeInsets.only(
+                                                                            right:
+                                                                                5,
+                                                                          ),
+                                                                          child:
+                                                                              Container(
+                                                                            height:
+                                                                                40,
+                                                                            width:
+                                                                                40,
+                                                                            decoration:
+                                                                                BoxDecoration(
+                                                                              color: Colors.grey.shade200,
+                                                                              borderRadius: BorderRadius.circular(
+                                                                                10,
+                                                                              ),
+                                                                            ),
+                                                                            child:
+                                                                                IconButton(
+                                                                              onPressed: minus,
+                                                                              icon: Icon(
+                                                                                Icons.remove,
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Text(
+                                                                          '${_n}',
+                                                                          style:
+                                                                              TextStyle(
+                                                                            fontSize:
+                                                                                18,
+                                                                          ),
+                                                                        ),
+                                                                        Padding(
+                                                                          padding:
+                                                                              const EdgeInsets.only(
+                                                                            left:
+                                                                                5,
+                                                                          ),
+                                                                          child:
+                                                                              Container(
+                                                                            height:
+                                                                                40,
+                                                                            width:
+                                                                                40,
+                                                                            decoration:
+                                                                                BoxDecoration(
+                                                                              color: Colors.grey.shade200,
+                                                                              borderRadius: BorderRadius.circular(
+                                                                                10,
+                                                                              ),
+                                                                            ),
+                                                                            child:
+                                                                                IconButton(
+                                                                              onPressed: add,
+                                                                              icon: Icon(
+                                                                                Icons.add,
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ],
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .all(
+                                                                        30.0),
+                                                                child: Divider(
+                                                                  color: Colors
+                                                                      .grey
+                                                                      .shade200,
+                                                                  thickness: 1,
+                                                                ),
+                                                              ),
+                                                              Row(
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .spaceAround,
+                                                                children: [
+                                                                  Padding(
+                                                                    padding: const EdgeInsets
+                                                                            .only(
+                                                                        right:
+                                                                            50),
+                                                                    child: Text(
+                                                                      'Delivery',
+                                                                      style:
+                                                                          TextStyle(
+                                                                        fontSize:
+                                                                            18,
+                                                                        fontWeight:
+                                                                            FontWeight.bold,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Text(
+                                                                    '₹0.00',
+                                                                    style:
+                                                                        TextStyle(
+                                                                      fontSize:
+                                                                          18,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .bold,
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                        .only(
+                                                                  top: 20,
+                                                                  right: 150,
+                                                                ),
+                                                                child: Text(
+                                                                  'Free Delivery from ₹40',
+                                                                  style:
+                                                                      TextStyle(
+                                                                    fontSize:
+                                                                        15,
+                                                                    color: Colors
+                                                                        .grey
+                                                                        .shade400,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                        .only(
+                                                                  top: 30,
+                                                                  right: 160,
+                                                                ),
+                                                                child: Text(
+                                                                  'Payment method',
+                                                                  style:
+                                                                      TextStyle(
+                                                                    color: Colors
+                                                                        .grey
+                                                                        .shade500,
+                                                                    fontSize:
+                                                                        18,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Row(
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .spaceEvenly,
+                                                                children: [
+                                                                  Padding(
+                                                                    padding:
+                                                                        const EdgeInsets
+                                                                            .only(
+                                                                      left: 20,
+                                                                    ),
+                                                                    child: Icon(
+                                                                      Icons
+                                                                          .payment,
+                                                                    ),
+                                                                  ),
+                                                                  Padding(
+                                                                    padding:
+                                                                        const EdgeInsets
+                                                                            .only(
+                                                                      right:
+                                                                          100,
+                                                                    ),
+                                                                    child: Text(
+                                                                      'Debit Card',
+                                                                      style:
+                                                                          TextStyle(
+                                                                        fontSize:
+                                                                            18,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  IconButton(
+                                                                    onPressed:
+                                                                        () {},
+                                                                    icon: Icon(
+                                                                      Icons
+                                                                          .arrow_forward_ios_rounded,
+                                                                      size: 15,
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                              SizedBox(
+                                                                height: 50,
+                                                                width: 350,
+                                                                child:
+                                                                    ElevatedButton(
+                                                                        style: ElevatedButton
+                                                                            .styleFrom(
+                                                                          primary:
+                                                                              Colors.black,
+                                                                          shape:
+                                                                              RoundedRectangleBorder(
+                                                                            borderRadius:
+                                                                                BorderRadius.circular(
+                                                                              10,
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        onPressed:
+                                                                            () {},
+                                                                        child:
+                                                                            Row(
+                                                                          mainAxisAlignment:
+                                                                              MainAxisAlignment.spaceBetween,
+                                                                          children: [
+                                                                            Text(
+                                                                              'Pay',
+                                                                            ),
+                                                                            Text('24min . ₹145')
+                                                                          ],
+                                                                        )),
+                                                              )
+                                                            ],
+                                                          ),
+                                                        ),
+                                                      );
+                                                    },
                                                     child: Text(
                                                         "Add to cart  \u{20B9}145.00")),
                                               )
@@ -2070,7 +3442,465 @@ class _HomepageState extends State<Homepage> {
                                                     ),
                                                   ),
                                                 ),
-                                                onPressed: () {},
+                                                onPressed: () {
+                                                  Navigator.pop(context);
+                                                  showModalBottomSheet(
+                                                    shape:
+                                                        RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .only(
+                                                      topLeft:
+                                                          Radius.circular(20),
+                                                      topRight:
+                                                          Radius.circular(20),
+                                                    )),
+                                                    backgroundColor:
+                                                        Colors.white,
+                                                    isScrollControlled: true,
+                                                    context: context,
+                                                    builder: (context) =>
+                                                        Container(
+                                                      height: 690,
+                                                      child: Column(
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                        .only(
+                                                                    top: 30,
+                                                                    right: 100),
+                                                            child: Text(
+                                                              'We Will deliver in\n24 minutes to the address',
+                                                              style: TextStyle(
+                                                                fontSize: 20,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Row(
+                                                            children: [
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                        .only(
+                                                                  top: 10,
+                                                                  left: 20,
+                                                                ),
+                                                                child: Text(
+                                                                  '100aEaling Rd',
+                                                                  style:
+                                                                      TextStyle(
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400,
+                                                                    fontSize:
+                                                                        18,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                        .only(
+                                                                  top: 10,
+                                                                  left: 20,
+                                                                ),
+                                                                child:
+                                                                    TextButton(
+                                                                  onPressed:
+                                                                      () {},
+                                                                  child: Text(
+                                                                    'change address',
+                                                                    style:
+                                                                        TextStyle(
+                                                                      fontSize:
+                                                                          18,
+                                                                      color: Colors
+                                                                          .grey
+                                                                          .shade300,
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              )
+                                                            ],
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                              top: 20,
+                                                            ),
+                                                            child: Row(
+                                                              mainAxisAlignment:
+                                                                  MainAxisAlignment
+                                                                      .spaceEvenly,
+                                                              children: [
+                                                                Image.asset(
+                                                                  'images/Grilled-chicken.png',
+                                                                  height: 80,
+                                                                ),
+                                                                Column(
+                                                                  children: [
+                                                                    Text(
+                                                                      'Grilled-Chicken',
+                                                                      style:
+                                                                          TextStyle(
+                                                                        fontSize:
+                                                                            18,
+                                                                      ),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding:
+                                                                          const EdgeInsets.all(
+                                                                              8.0),
+                                                                      child:
+                                                                          Row(
+                                                                        children: [
+                                                                          Padding(
+                                                                            padding:
+                                                                                const EdgeInsets.only(
+                                                                              right: 5,
+                                                                            ),
+                                                                            child:
+                                                                                Container(
+                                                                              height: 40,
+                                                                              width: 40,
+                                                                              decoration: BoxDecoration(
+                                                                                color: Colors.grey.shade200,
+                                                                                borderRadius: BorderRadius.circular(
+                                                                                  10,
+                                                                                ),
+                                                                              ),
+                                                                              child: IconButton(
+                                                                                onPressed: minus,
+                                                                                icon: Icon(
+                                                                                  Icons.remove,
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                          Text(
+                                                                            '${_n}',
+                                                                            style:
+                                                                                TextStyle(
+                                                                              fontSize: 18,
+                                                                            ),
+                                                                          ),
+                                                                          Padding(
+                                                                            padding:
+                                                                                const EdgeInsets.only(
+                                                                              left: 5,
+                                                                            ),
+                                                                            child:
+                                                                                Container(
+                                                                              height: 40,
+                                                                              width: 40,
+                                                                              decoration: BoxDecoration(
+                                                                                color: Colors.grey.shade200,
+                                                                                borderRadius: BorderRadius.circular(
+                                                                                  10,
+                                                                                ),
+                                                                              ),
+                                                                              child: IconButton(
+                                                                                onPressed: add,
+                                                                                icon: Icon(
+                                                                                  Icons.add,
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ],
+                                                                      ),
+                                                                    ),
+                                                                  ],
+                                                                ),
+                                                                Text(
+                                                                  '\u{20B9}285',
+                                                                  style: TextStyle(
+                                                                      fontSize:
+                                                                          18,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .bold),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .all(30.0),
+                                                            child: Divider(
+                                                              color: Colors.grey
+                                                                  .shade200,
+                                                              thickness: 1,
+                                                            ),
+                                                          ),
+                                                          Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .spaceEvenly,
+                                                            children: [
+                                                              Icon(
+                                                                Icons
+                                                                    .food_bank_outlined,
+                                                                size: 40,
+                                                              ),
+                                                              Text(
+                                                                'cutlery',
+                                                                style:
+                                                                    TextStyle(
+                                                                  fontSize: 18,
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .all(
+                                                                        8.0),
+                                                                child: Row(
+                                                                  children: [
+                                                                    Padding(
+                                                                      padding:
+                                                                          const EdgeInsets
+                                                                              .only(
+                                                                        right:
+                                                                            5,
+                                                                      ),
+                                                                      child:
+                                                                          Container(
+                                                                        height:
+                                                                            40,
+                                                                        width:
+                                                                            40,
+                                                                        decoration:
+                                                                            BoxDecoration(
+                                                                          color: Colors
+                                                                              .grey
+                                                                              .shade200,
+                                                                          borderRadius:
+                                                                              BorderRadius.circular(
+                                                                            10,
+                                                                          ),
+                                                                        ),
+                                                                        child:
+                                                                            IconButton(
+                                                                          onPressed:
+                                                                              minus,
+                                                                          icon:
+                                                                              Icon(
+                                                                            Icons.remove,
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                    Text(
+                                                                      '${_n}',
+                                                                      style:
+                                                                          TextStyle(
+                                                                        fontSize:
+                                                                            18,
+                                                                      ),
+                                                                    ),
+                                                                    Padding(
+                                                                      padding:
+                                                                          const EdgeInsets
+                                                                              .only(
+                                                                        left: 5,
+                                                                      ),
+                                                                      child:
+                                                                          Container(
+                                                                        height:
+                                                                            40,
+                                                                        width:
+                                                                            40,
+                                                                        decoration:
+                                                                            BoxDecoration(
+                                                                          color: Colors
+                                                                              .grey
+                                                                              .shade200,
+                                                                          borderRadius:
+                                                                              BorderRadius.circular(
+                                                                            10,
+                                                                          ),
+                                                                        ),
+                                                                        child:
+                                                                            IconButton(
+                                                                          onPressed:
+                                                                              add,
+                                                                          icon:
+                                                                              Icon(
+                                                                            Icons.add,
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ],
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .all(30.0),
+                                                            child: Divider(
+                                                              color: Colors.grey
+                                                                  .shade200,
+                                                              thickness: 1,
+                                                            ),
+                                                          ),
+                                                          Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .spaceAround,
+                                                            children: [
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        right:
+                                                                            50),
+                                                                child: Text(
+                                                                  'Delivery',
+                                                                  style:
+                                                                      TextStyle(
+                                                                    fontSize:
+                                                                        18,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Text(
+                                                                '₹0.00',
+                                                                style:
+                                                                    TextStyle(
+                                                                  fontSize: 18,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                              top: 20,
+                                                              right: 150,
+                                                            ),
+                                                            child: Text(
+                                                              'Free Delivery from ₹40',
+                                                              style: TextStyle(
+                                                                fontSize: 15,
+                                                                color: Colors
+                                                                    .grey
+                                                                    .shade400,
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                              top: 30,
+                                                              right: 160,
+                                                            ),
+                                                            child: Text(
+                                                              'Payment method',
+                                                              style: TextStyle(
+                                                                color: Colors
+                                                                    .grey
+                                                                    .shade500,
+                                                                fontSize: 18,
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .spaceEvenly,
+                                                            children: [
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                        .only(
+                                                                  left: 20,
+                                                                ),
+                                                                child: Icon(
+                                                                  Icons.payment,
+                                                                ),
+                                                              ),
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                        .only(
+                                                                  right: 100,
+                                                                ),
+                                                                child: Text(
+                                                                  'Debit Card',
+                                                                  style:
+                                                                      TextStyle(
+                                                                    fontSize:
+                                                                        18,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              IconButton(
+                                                                onPressed:
+                                                                    () {},
+                                                                icon: Icon(
+                                                                  Icons
+                                                                      .arrow_forward_ios_rounded,
+                                                                  size: 15,
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          SizedBox(
+                                                            height: 50,
+                                                            width: 350,
+                                                            child:
+                                                                ElevatedButton(
+                                                                    style: ElevatedButton
+                                                                        .styleFrom(
+                                                                      primary:
+                                                                          Colors
+                                                                              .black,
+                                                                      shape:
+                                                                          RoundedRectangleBorder(
+                                                                        borderRadius:
+                                                                            BorderRadius.circular(
+                                                                          10,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                    onPressed:
+                                                                        () {},
+                                                                    child: Row(
+                                                                      mainAxisAlignment:
+                                                                          MainAxisAlignment
+                                                                              .spaceBetween,
+                                                                      children: [
+                                                                        Text(
+                                                                          'Pay',
+                                                                        ),
+                                                                        Text(
+                                                                            '24min . ₹285')
+                                                                      ],
+                                                                    )),
+                                                          )
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  );
+                                                },
                                                 child: Text(
                                                     "Add to cart  \u{20B9}285.00")),
                                           )
