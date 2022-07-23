@@ -2,11 +2,11 @@
 
 ## Steps to run this application in VS Code*
 
-*Clone the project* 
+**Clone the project**
 
-*After cloning the use flutter command- flutter clean and after that use flutter pub get*
+**After cloning the use flutter command- flutter clean and after that use flutter pub get**
 
-*After the above steps use flutter run to execute the code*
+**After the above steps use flutter run to execute the code**
 
 <img src= "https://user-images.githubusercontent.com/84460660/180616227-2dd7a7b8-667b-42c2-8fcb-3f5cce5da8ac.png" width ="300" height = "600"> 
 
@@ -22,4 +22,4 @@
 
 
 
-*These are the screenshots of the Food Delivery App UI(Internface only)*
+**These are the screenshots of the Food Delivery App UI(Internface only)**
