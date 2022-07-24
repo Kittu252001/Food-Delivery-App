@@ -22,4 +22,4 @@
 
 
 
-**These are the screenshots of the Food Delivery App UI(Internface only)**
+**These are the screenshots of the Food Delivery App UI(Interface only)**
